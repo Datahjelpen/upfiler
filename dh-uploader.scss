@@ -1,0 +1,63 @@
+#dh-uploader {
+	&-filelist {
+		margin: 0;
+		padding: 0.5em 0;
+
+
+		li {
+			display: block;
+			margin: 1em 0;
+			padding: 0.5em;
+			width: 100%;
+			background-color: #efefed;
+
+			&:before,
+			&:after {
+				content: " ";
+				display: table;
+			}
+
+			&:after{
+				clear: both;
+			}
+
+			a {
+				display: block;
+				float: left;
+			}
+
+			button {
+				float: right;
+				border: none;
+				padding: 0.5rem;
+				font-weight: 300;
+				text-align: center;
+				line-height: 0.5rem;
+				color: #FB3640;
+				background-color: transparent;
+
+				&:focus,
+				&:hover {
+					color: #fff;
+					background-color: #FB3640;
+				}
+			}
+
+			img,
+			p {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			p {
+				margin: 0 0 0 1em;
+			}
+
+			img {
+				width: 100%;
+				max-width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
+}
