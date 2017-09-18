@@ -11,12 +11,6 @@
 	uploadBtn.addEventListener('click', function() { input.click() });
 	input.addEventListener('change', function() { submitBtn.click() });
 
-	window.onbeforeunload = function() {
-		if (dhTarget.value.length >= 1) {
-			return 'Er du sikker på at du vil gå vekk fra siden?';
-		}
-	}
-
 	form.addEventListener('submit', function(e) {
 		stopDefaultEvent(e);
 
