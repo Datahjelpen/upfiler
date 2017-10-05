@@ -42,8 +42,8 @@
 			}
 		}
 
-		xhr.setRequestHeader('X-API-KEY', 'fck5rfsZKfpdRbG4npSVz3Qz');
 		xhr.open(form.method, form.action);
+		xhr.setRequestHeader('X-API-KEY', 'fck5rfsZKfpdRbG4npSVz3Qz');
 		xhr.send(formData)
 	});
 
