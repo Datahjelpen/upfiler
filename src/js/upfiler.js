@@ -6,7 +6,7 @@
 		uploadBtn = document.getElementById('dh-uploader-btn'),
 		input     = document.getElementById('dh-uploader-input'),
 		submitBtn = document.getElementById('dh-uploader-submit'),
-		dhTarget = document.querySelector('.dh-uploader-target');
+		dhTarget  = document.querySelector('.dh-uploader-target');
 
 	uploadBtn.addEventListener('click', function() { input.click() });
 	input.addEventListener('change', function() { submitBtn.click() });
@@ -42,6 +42,7 @@
 			}
 		}
 
+		xhr.setRequestHeader('X-API-KEY', 'fck5rfsZKfpdRbG4npSVz3Qz');
 		xhr.open(form.method, form.action);
 		xhr.send(formData)
 	});
