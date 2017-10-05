@@ -43,7 +43,6 @@
 		}
 
 		xhr.open(form.method, form.action);
-		xhr.setRequestHeader('X-API-KEY', 'fck5rfsZKfpdRbG4npSVz3Qz');
 		xhr.send(formData)
 	});
 
@@ -62,7 +61,7 @@
 			p.setAttribute('id', hash + '-name');
 			
 			var img = document.createElement('img');
-			img.setAttribute('src', data.files[i].url);
+			img.setAttribute('src', data.files[i].thumbnail);
 
 			var del = document.createElement('button');
 			del.innerHTML = 'X';
