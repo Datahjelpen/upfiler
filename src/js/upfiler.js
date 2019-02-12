@@ -50,16 +50,16 @@
 		for (var i = data.files.length - 1; i >= 0; i--) {
 			var hash = data.files[i].hash;
 			var li = document.createElement('li');
-			
+
 			var a = document.createElement('a');
 			a.setAttribute('id', hash + '-link');
 			a.setAttribute('href', data.files[i].url);
 			a.setAttribute('data-name', data.files[i].name);
 			a.setAttribute('target', '_blank');
-			
+
 			var p = document.createElement('p');
 			p.setAttribute('id', hash + '-name');
-			
+
 			var img = document.createElement('img');
 			img.setAttribute('src', data.files[i].thumbnail);
 
@@ -85,13 +85,13 @@
 					item.hash = hash;
 					item.name = document.getElementById(hash + '-name').innerHTML;
 					item.url = document.getElementById(hash + '-link').getAttribute('href');
-					
+
 					data.files.push(item);
 				}
 
 				insertData(data, true);
 			});
-			
+
 			a.appendChild(img);
 			p.appendChild(document.createTextNode(data.files[i].name));
 			a.appendChild(p);
@@ -106,7 +106,13 @@
 		var output = '\n\n';
 
 		for (var i = data.files.length - 1; i >= 0; i--) {
-			output += data.files[i].name + ':\n' + data.files[i].url + '\n\n';
+			output +=
+        data.files[i].name +
+        ':\n <img src="' +
+        data.files[i].url +
+        '" alt="' +
+        data.files[i].name +
+        '" width="256">\n\n';
 		}
 
 		if (!filesAddedBefore) output = '-------- VEDLAGTE FILER --------\n' + output;
